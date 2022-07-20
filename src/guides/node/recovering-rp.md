@@ -131,7 +131,7 @@ Please see the documentation for running in [Reverse Hybrid Mode](./advanced-con
 If you would like to test the recovery process to ensure you have the correct mnemonic and passwords **without actually regenerating your node wallet's private key or importing your validator keys**, you can do so with the following command:
 
 ```
-rocketpool wallet test-recovery -a 0x1234abcd...
+rocketpool wallet test-mnemonic -a 0x1234abcd...
 ```
 
 Where `0x1234abcd...` is the address you want to import, starting with the `0x` prefix.
@@ -142,7 +142,7 @@ If, for some reason, you want to recover the wallet but *not* any of the validat
 For example:
 
 ```
-rocketpool wallet test-recovery -a 0x1234abcd... -k
+rocketpool wallet test-mnemonic -a 0x1234abcd... -k
 ```
 :::
 
@@ -152,7 +152,7 @@ The Smartnode will automatically search through the most popular derivation path
 If you have a custom derivation path, use the `-d` flag to specify it.
 For example:
 ```
-rocketpool wallet test-recovery -d "m/44'/60'/0'/%d"
+rocketpool wallet test-mnemonic -d "m/44'/60'/0'/%d"
 ```
 
 Use `%d` for the portion of the path that can be iterated to use different indicies.
@@ -160,7 +160,7 @@ Use `%d` for the portion of the path that can be iterated to use different indic
 If you have a custom address index, use the `-i` flag to specify it.
 For example, if your address was the 6th one on the standard derivation path, you could use:
 ```
-rocketpool wallet test-recovery -i 5
+rocketpool wallet test-mnemonic -i 5
 ```
 
 You can use both the `-d` and `-i` flags at the same time if you require.
